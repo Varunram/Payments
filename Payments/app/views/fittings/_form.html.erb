@@ -1,0 +1,57 @@
+<%= form_for(@fitting) do |f| %>
+  <% if @fitting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fitting.errors.count, "error") %> prohibited this fitting from being saved:</h2>
+
+      <ul>
+      <% @fitting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :slno %><br>
+    <%= f.number_field :slno %>
+  </div>
+  <div class="field">
+    <%= f.label :codeno %><br>
+    <%= f.text_field :codeno %>
+  </div>
+  <div class="field">
+    <%= f.label :typec %><br>
+    <%= f.text_field :typec %>
+  </div>
+  <div class="field">
+    <%= f.label :materialgrade %><br>
+    <%= f.text_field :materialgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :itemdescription %><br>
+    <%= f.text_field :itemdescription %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :sch %><br>
+    <%= f.text_field :sch %>
+  </div>
+  <div class="field">
+    <%= f.label :lr %><br>
+    <%= f.text_field :lr %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

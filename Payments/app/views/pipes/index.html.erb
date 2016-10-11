@@ -1,0 +1,47 @@
+<h1>Listing pipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Description</th>
+      <th>Typec</th>
+      <th>Materialgrade</th>
+      <th>Inch</th>
+      <th>Od</th>
+      <th>Tk</th>
+      <th>Lg</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pipes.each do |pipe| %>
+      <tr>
+        <td><%= pipe.slno %></td>
+        <td><%= pipe.codeno %></td>
+        <td><%= pipe.description %></td>
+        <td><%= pipe.typec %></td>
+        <td><%= pipe.materialgrade %></td>
+        <td><%= pipe.inch %></td>
+        <td><%= pipe.od %></td>
+        <td><%= pipe.tk %></td>
+        <td><%= pipe.lg %></td>
+        <td><%= pipe.quantity %></td>
+        <td><%= pipe.price %></td>
+        <td><%= link_to 'Show', pipe %></td>
+        <td><%= link_to 'Edit', edit_pipe_path(pipe) %></td>
+        <td><%= link_to 'Destroy', pipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pipe', new_pipe_path %>

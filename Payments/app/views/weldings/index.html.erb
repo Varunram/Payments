@@ -1,0 +1,37 @@
+<h1>Listing weldings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      <th>Uom</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weldings.each do |welding| %>
+      <tr>
+        <td><%= welding.slno %></td>
+        <td><%= welding.codeno %></td>
+        <td><%= welding.description %></td>
+        <td><%= welding.quantity %></td>
+        <td><%= welding.UOM %></td>
+        <td><%= welding.price %></td>
+        <td><%= link_to 'Show', welding %></td>
+        <td><%= link_to 'Edit', edit_welding_path(welding) %></td>
+        <td><%= link_to 'Destroy', welding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Welding', new_welding_path %>

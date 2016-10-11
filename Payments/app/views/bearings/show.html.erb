@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slno:</strong>
+  <%= @bearing.slno %>
+</p>
+
+<p>
+  <strong>Codeno:</strong>
+  <%= @bearing.codeno %>
+</p>
+
+<p>
+  <strong>Typec:</strong>
+  <%= @bearing.typec %>
+</p>
+
+<p>
+  <strong>Materialdescription:</strong>
+  <%= @bearing.materialdescription %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @bearing.size %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @bearing.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bearing.price %>
+</p>
+
+<%= link_to 'Edit', edit_bearing_path(@bearing) %> |
+<%= link_to 'Back', bearings_path %>

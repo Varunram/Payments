@@ -1,0 +1,24 @@
+<% if !flash[:notice].blank? %>
+<div class = "alert alert-info">
+  <%= flash[:notice] %>
+</div>
+<%end%>
+<br>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th> User Name </th>
+      <th>Download Certificate </th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% @certs.each do |cert| %>
+      <tr>
+        <td><%= cert.name %></td>
+        <td><%= link_to "Download Certificate", cert.attachment_url %></td>
+        <td><%= button_to "Delete", cert, method: :delete, class: "btn btn-danger", confirm: "Are You sure you want to delete this Certificate?" %></td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>

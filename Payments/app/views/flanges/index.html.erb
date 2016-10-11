@@ -1,0 +1,43 @@
+<h1>Listing flanges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Materialgrade</th>
+      <th>Size</th>
+      <th>Classc</th>
+      <th>Tk</th>
+      <th>Quantity</th>
+      <th>Kgs</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flanges.each do |flange| %>
+      <tr>
+        <td><%= flange.slno %></td>
+        <td><%= flange.codeno %></td>
+        <td><%= flange.materialgrade %></td>
+        <td><%= flange.size %></td>
+        <td><%= flange.classc %></td>
+        <td><%= flange.tk %></td>
+        <td><%= flange.quantity %></td>
+        <td><%= flange.kgs %></td>
+        <td><%= flange.price %></td>
+        <td><%= link_to 'Show', flange %></td>
+        <td><%= link_to 'Edit', edit_flange_path(flange) %></td>
+        <td><%= link_to 'Destroy', flange, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flange', new_flange_path %>

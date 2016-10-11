@@ -1,0 +1,22 @@
+<% if current_user.admin? %>
+
+<% @users.each do |user| %>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Assign Auth Id </th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+        <%if user.auth !=0 %>
+          <td><%= user.auth %></td>
+          <h4>If you want to edit the field, do so below </h4>
+          <%= render 'useredit' %>
+        <%else%>
+          <%= render 'useredit' %>
+        <%end%>
+    </tr>
+  <% end %>
+</table>

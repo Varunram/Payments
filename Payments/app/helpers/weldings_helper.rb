@@ -1,0 +1,2 @@
+module WeldingsHelper
+end

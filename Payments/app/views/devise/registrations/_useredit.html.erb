@@ -1,0 +1,9 @@
+<h1> Enter New Authorization ID </h1>
+<% @users.each do |user| %>
+  <%= form_for(user) do |f| %>
+    <div class="form-group">
+      <%= f.label :auth class="form-control" %>
+      <%= f.number_field :auth class="form-control" %>
+    </div>
+  <%end%>
+<%end%>

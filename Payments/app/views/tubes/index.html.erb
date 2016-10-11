@@ -1,0 +1,43 @@
+<h1>Listing tubes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Typec</th>
+      <th>Materialgrade</th>
+      <th>Od</th>
+      <th>Lg</th>
+      <th>Weight</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tubes.each do |tube| %>
+      <tr>
+        <td><%= tube.slno %></td>
+        <td><%= tube.codeno %></td>
+        <td><%= tube.typec %></td>
+        <td><%= tube.materialgrade %></td>
+        <td><%= tube.od %></td>
+        <td><%= tube.lg %></td>
+        <td><%= tube.weight %></td>
+        <td><%= tube.quantity %></td>
+        <td><%= tube.price %></td>
+        <td><%= link_to 'Show', tube %></td>
+        <td><%= link_to 'Edit', edit_tube_path(tube) %></td>
+        <td><%= link_to 'Destroy', tube, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tube', new_tube_path %>

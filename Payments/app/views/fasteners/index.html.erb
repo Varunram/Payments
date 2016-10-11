@@ -1,0 +1,41 @@
+<h1>Listing fasteners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Typec</th>
+      <th>Grade</th>
+      <th>Item</th>
+      <th>Size</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fasteners.each do |fastener| %>
+      <tr>
+        <td><%= fastener.slno %></td>
+        <td><%= fastener.codeno %></td>
+        <td><%= fastener.typec %></td>
+        <td><%= fastener.grade %></td>
+        <td><%= fastener.item %></td>
+        <td><%= fastener.size %></td>
+        <td><%= fastener.quantity %></td>
+        <td><%= fastener.price %></td>
+        <td><%= link_to 'Show', fastener %></td>
+        <td><%= link_to 'Edit', edit_fastener_path(fastener) %></td>
+        <td><%= link_to 'Destroy', fastener, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fastener', new_fastener_path %>

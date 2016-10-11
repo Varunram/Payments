@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slno: 1
+  codeno: 
+  description: MyString
+  quantity: MyString
+  UOM: MyString
+  price: 1.5
+
+two:
+  slno: 1
+  codeno: 
+  description: MyString
+  quantity: MyString
+  UOM: MyString
+  price: 1.5

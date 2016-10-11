@@ -1,0 +1,3 @@
+Hi <%= @user.name %>
+Greetings From Kandlar.com, we are happy that you are interested in our auction. To confirm your registration, click the link below
+<%= confirm_email_user_urll(@user.confirm_token) %>

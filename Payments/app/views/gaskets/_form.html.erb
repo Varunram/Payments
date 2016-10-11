@@ -1,0 +1,54 @@
+<%= form_for(@gasket) do |f| %>
+  <% if @gasket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gasket.errors.count, "error") %> prohibited this gasket from being saved:</h2>
+
+      <ul>
+      <% @gasket.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :slno %><br>
+    <%= f.number_field :slno %>
+  </div>
+  <div class="field">
+    <%= f.label :codeno %><br>
+    <%= f.text_field :codeno %>
+  </div>
+  <div class="field">
+    <%= f.label :typec %><br>
+    <%= f.text_field :typec %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :nb %><br>
+    <%= f.text_field :nb %>
+  </div>
+  <div class="field">
+    <%= f.label :thk %><br>
+    <%= f.text_field :thk %>
+  </div>
+  <div class="field">
+    <%= f.label :classc %><br>
+    <%= f.text_field :classc %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

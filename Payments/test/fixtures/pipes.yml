@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slno: 1
+  codeno: MyString
+  description: MyString
+  typec: MyString
+  materialgrade: MyString
+  inch: MyString
+  od: MyString
+  tk: MyString
+  lg: MyString
+  quantity: MyString
+  price: 1.5
+
+two:
+  slno: 1
+  codeno: MyString
+  description: MyString
+  typec: MyString
+  materialgrade: MyString
+  inch: MyString
+  od: MyString
+  tk: MyString
+  lg: MyString
+  quantity: MyString
+  price: 1.5

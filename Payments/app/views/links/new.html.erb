@@ -1,0 +1,7 @@
+<% if current_user.admin? -%>
+  <h1>New link</h1>
+    <%= render 'form' %>
+    <%= link_to 'Back', links_path %>
+<% else %>
+  <h2> You Are Not Authorised to View this page </h2>
+<%end%>

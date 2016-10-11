@@ -1,0 +1,47 @@
+<h1>Listing rods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Code</th>
+      <th>Typec</th>
+      <th>Material</th>
+      <th>Size</th>
+      <th>Tk</th>
+      <th>Dia</th>
+      <th>Lg</th>
+      <th>Quantity</th>
+      <th>Weight</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rods.each do |rod| %>
+      <tr>
+        <td><%= rod.slno %></td>
+        <td><%= rod.code %></td>
+        <td><%= rod.typec %></td>
+        <td><%= rod.material %></td>
+        <td><%= rod.size %></td>
+        <td><%= rod.tk %></td>
+        <td><%= rod.dia %></td>
+        <td><%= rod.lg %></td>
+        <td><%= rod.quantity %></td>
+        <td><%= rod.weight %></td>
+        <td><%= rod.price %></td>
+        <td><%= link_to 'Show', rod %></td>
+        <td><%= link_to 'Edit', edit_rod_path(rod) %></td>
+        <td><%= link_to 'Destroy', rod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rod', new_rod_path %>

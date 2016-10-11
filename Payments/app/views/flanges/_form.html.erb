@@ -1,0 +1,53 @@
+<%= form_for(@flange) do |f| %>
+  <% if @flange.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flange.errors.count, "error") %> prohibited this flange from being saved:</h2>
+
+      <ul>
+      <% @flange.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :slno %><br>
+    <%= f.number_field :slno %>
+  </div>
+  <div class="field">
+    <%= f.label :codeno %><br>
+    <%= f.text_field :codeno %>
+  </div>
+  <div class="field">
+    <%= f.label :materialgrade %><br>
+    <%= f.text_field :materialgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :classc %><br>
+    <%= f.text_field :classc %>
+  </div>
+  <div class="field">
+    <%= f.label :tk %><br>
+    <%= f.text_field :tk %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :kgs %><br>
+    <%= f.text_field :kgs %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

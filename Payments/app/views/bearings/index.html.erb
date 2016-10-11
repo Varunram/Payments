@@ -1,0 +1,39 @@
+<h1>Listing bearings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Typec</th>
+      <th>Materialdescription</th>
+      <th>Size</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bearings.each do |bearing| %>
+      <tr>
+        <td><%= bearing.slno %></td>
+        <td><%= bearing.codeno %></td>
+        <td><%= bearing.typec %></td>
+        <td><%= bearing.materialdescription %></td>
+        <td><%= bearing.size %></td>
+        <td><%= bearing.quantity %></td>
+        <td><%= bearing.price %></td>
+        <td><%= link_to 'Show', bearing %></td>
+        <td><%= link_to 'Edit', edit_bearing_path(bearing) %></td>
+        <td><%= link_to 'Destroy', bearing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bearing', new_bearing_path %>

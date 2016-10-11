@@ -1,0 +1,61 @@
+<%= form_for(@pipe) do |f| %>
+  <% if @pipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pipe.errors.count, "error") %> prohibited this pipe from being saved:</h2>
+
+      <ul>
+      <% @pipe.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :slno %><br>
+    <%= f.number_field :slno %>
+  </div>
+  <div class="field">
+    <%= f.label :codeno %><br>
+    <%= f.text_field :codeno %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :typec %><br>
+    <%= f.text_field :typec %>
+  </div>
+  <div class="field">
+    <%= f.label :materialgrade %><br>
+    <%= f.text_field :materialgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :inch %><br>
+    <%= f.text_field :inch %>
+  </div>
+  <div class="field">
+    <%= f.label :od %><br>
+    <%= f.text_field :od %>
+  </div>
+  <div class="field">
+    <%= f.label :tk %><br>
+    <%= f.text_field :tk %>
+  </div>
+  <div class="field">
+    <%= f.label :lg %><br>
+    <%= f.text_field :lg %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

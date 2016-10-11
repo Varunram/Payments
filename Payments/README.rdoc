@@ -1,0 +1,5 @@
+== LinkAggr
+A Link Aggregator App
+
+
+Coded in Ruby and Developed on Rails

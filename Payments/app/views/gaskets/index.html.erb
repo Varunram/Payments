@@ -1,0 +1,43 @@
+<h1>Listing gaskets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Typec</th>
+      <th>Material</th>
+      <th>Nb</th>
+      <th>Thk</th>
+      <th>Classc</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gaskets.each do |gasket| %>
+      <tr>
+        <td><%= gasket.slno %></td>
+        <td><%= gasket.codeno %></td>
+        <td><%= gasket.typec %></td>
+        <td><%= gasket.material %></td>
+        <td><%= gasket.nb %></td>
+        <td><%= gasket.thk %></td>
+        <td><%= gasket.classc %></td>
+        <td><%= gasket.quantity %></td>
+        <td><%= gasket.price %></td>
+        <td><%= link_to 'Show', gasket %></td>
+        <td><%= link_to 'Edit', edit_gasket_path(gasket) %></td>
+        <td><%= link_to 'Destroy', gasket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gasket', new_gasket_path %>

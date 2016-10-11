@@ -1,0 +1,45 @@
+<h1>Listing fittings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Codeno</th>
+      <th>Typec</th>
+      <th>Materialgrade</th>
+      <th>Itemdescription</th>
+      <th>Size</th>
+      <th>Sch</th>
+      <th>Lr</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fittings.each do |fitting| %>
+      <tr>
+        <td><%= fitting.slno %></td>
+        <td><%= fitting.codeno %></td>
+        <td><%= fitting.typec %></td>
+        <td><%= fitting.materialgrade %></td>
+        <td><%= fitting.itemdescription %></td>
+        <td><%= fitting.size %></td>
+        <td><%= fitting.sch %></td>
+        <td><%= fitting.lr %></td>
+        <td><%= fitting.quantity %></td>
+        <td><%= fitting.price %></td>
+        <td><%= link_to 'Show', fitting %></td>
+        <td><%= link_to 'Edit', edit_fitting_path(fitting) %></td>
+        <td><%= link_to 'Destroy', fitting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fitting', new_fitting_path %>

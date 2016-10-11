@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slno:</strong>
+  <%= @welding.slno %>
+</p>
+
+<p>
+  <strong>Codeno:</strong>
+  <%= @welding.codeno %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @welding.description %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @welding.quantity %>
+</p>
+
+<p>
+  <strong>Uom:</strong>
+  <%= @welding.UOM %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @welding.price %>
+</p>
+
+<%= link_to 'Edit', edit_welding_path(@welding) %> |
+<%= link_to 'Back', weldings_path %>
