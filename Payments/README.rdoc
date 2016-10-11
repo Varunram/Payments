@@ -1,5 +1,5 @@
-== LinkAggr
-A Link Aggregator App
+== Derived from LinkAggr
+A Payments Portal
 
 
 Coded in Ruby and Developed on Rails
